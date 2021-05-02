@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'myOrganizer';
+  activeSection="contacs" 
+
+  onNavigate(section: string){
+    this.activeSection=section
+  }
 }

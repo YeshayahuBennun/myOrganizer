@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-12">
+        <form (ngSubmit)="onSubmit()" #f="ngForm">
+            <div class="row">
+                <div class="col-5 form-group">
+                    <label for="date">When?</label>
+                    <input type="datetime-local" 
+                           id="date"
+                           [(ngModel)]="meeting.date"
+                           name="when"
+                           class="form-control">
+                    <label for="contactName">With</label>
+                    <input type="text" 
+                           id="Name"
+                           [(ngModel)]="meeting.contactName" 
+                           name="with"
+                           class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-5 btn-group" role="group">
+                    <button class="btn btn-success"
+                    type="submit">Create</button>
+                    <button class="btn btn-danger"
+                    type="button"
+                    (click)="onMeetingClear()">Clear</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

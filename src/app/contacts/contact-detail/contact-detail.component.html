@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col-12">
+        <img [src]="contact.imagePath"
+             alt="Contact picture should be here..."
+             class="img-fluid"
+             style="max-height: 650px;">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <h1>{{contact.name}}</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="btn-group" 
+             role="group">
+            <button type="button" 
+                    class="btn btn-primary"
+                    (click)="onMeetContact()">Meet</button>
+            <button type="button" 
+                    class="btn btn-secondary"
+                    (click)="onEditContact()">Edit</button>
+            <button type="button" 
+                    class="btn btn-danger"
+                    (click)="removeContact()">Delete</button>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <p>{{contact.description}}</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        Records - TDB
+    </div>
+</div>

@@ -1,0 +1,57 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit()" #f="ngForm">
+        <div class="row">
+            <div class="col-12">
+                <!--Name-->
+                <div class="from-group">
+                    <label for="contactName">Name</label>
+                    <input type="text"
+                           id="contactName"
+                           [(ngModel)]="contact.name"
+                           name="contactName"
+                           class="form-control"
+                           minlength="2"
+                           maxlength="30"
+                           required
+                           #n="ngModel">
+                </div>
+                <p *ngIf="!n.valid && n.touched" class="help-block">Please enter a contact name between 2 and 30 characters</p>
+                <!--Description-->
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text"
+                           id="description"
+                           [(ngModel)]="contact.description"
+                           name="description"
+                           class="form-control">
+                </div>
+                <!--Image Path-->
+                <div class="form-group">
+                    <label for="imagePath">Image Path</label>
+                    <input type="text"
+                           id="imagePath"
+                           [(ngModel)]="contact.imagePath"
+                           name="imagePath"
+                           class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-2">
+                <button class="btn btn-primary"
+                        type="submit" [disabled]="!f.valid">Done</button>
+            </div>
+            <div class="col-2">
+                 <button class="btn btn-secondary"
+                         type="button"
+                         (click)="onContactClear()">Clear</button>
+            </div>
+            <div class="col-2">
+                <button class="btn btn-danger"
+                        type="button"
+                        (click)="onContactCancel()">Cancel</button>
+            </div>
+        </div>
+    </form>
+</div>

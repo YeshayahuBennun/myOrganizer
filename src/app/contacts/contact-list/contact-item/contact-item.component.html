@@ -1,0 +1,11 @@
+<a style="cursor:pointer;" 
+   [routerLink]="[id]"
+   routerLinkActive="active"
+class="list-group-item">
+    <img [src]="contact.imagePath"
+         alt="The image of the contact..." 
+         class="img-fluid rounded-circle"
+         style="max-height: 100px;">
+    <h4>{{contact.name}}</h4>
+    <p>{{contact.description}}</p>
+</a>
